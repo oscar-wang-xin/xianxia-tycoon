@@ -1,6 +1,6 @@
 import type { GameState } from './types';
 
-const KEY = 'shenzhou-tycoon-save-v1';
+const KEY = 'xianxia-tycoon-save-v1';
 
 function storage(): Storage | null {
   try {
