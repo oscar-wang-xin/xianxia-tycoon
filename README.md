@@ -1,5 +1,9 @@
 # 仙域大富翁 · Xianxia Tycoon
 
+| 对局总览 | 地块详情浮层 |
+| :---: | :---: |
+| ![对局总览](docs/screenshot-overview.png) | ![地块详情浮层](docs/screenshot-tile-tip.png) |
+
 纯前端的 3D 修真题材大富翁游戏：Three.js 沙盘棋盘 + React 界面，规则引擎与渲染层完全解耦，可在浏览器游玩，也可在 Node 中无头仿真校验。
 
 无后端、无外部素材：模型、贴图、音效全部由代码程序化生成。
