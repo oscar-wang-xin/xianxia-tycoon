@@ -98,6 +98,8 @@ index.html
 
 > 说明：`dist/` 内的资源文件名带内容哈希，每次重新构建都会变化并产生一次 diff。若你不想把构建产物纳入版本库，可在 `.gitignore` 中恢复对 `dist/` 的忽略。
 
+仓库内置了 GitHub Actions 工作流（`.github/workflows/deploy-pages.yml`）：推送到 `main` 后会自动安装依赖、构建并将 `dist/` 发布到 GitHub Pages，站点根路径为 `https://<用户名>.github.io/<仓库名>/`。首次使用需在仓库 Settings → Pages 将 Source 设为「GitHub Actions」。
+
 ## 许可
 
 本项目基于 [MIT License](./LICENSE) 开源，Copyright (c) 2026 oscar-wang-xin。
@@ -201,6 +203,8 @@ The repository ships a prebuilt static bundle in `dist/`, so deployment needs no
 The build uses relative paths (Vite `base: './'`), so it can be served from any subdirectory. Since the output is an ES Module it must be served over HTTP and cannot be opened via `file://`; use `npm run preview` or `python -m http.server` for a local check. `public/.nojekyll` is copied into `dist/` so that GitHub Pages skips Jekyll processing.
 
 > Note: asset filenames in `dist/` include a content hash, so every rebuild produces a diff. To keep build output out of version control, re-add `dist/` to `.gitignore`.
+
+A GitHub Actions workflow (`.github/workflows/deploy-pages.yml`) is included: pushing to `main` installs dependencies, builds the project and publishes `dist/` to GitHub Pages, served at `https://<user>.github.io/<repo>/`. On first use, set Settings → Pages → Source to "GitHub Actions".
 
 ## License
 
